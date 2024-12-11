@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Bayangan Gambar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Slackey&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="game-title">Matching Mania</h1>
+    <button id="show-instructions-button" onclick="showIntructions()">Tampilkan Intruksi</button>
+
+    <div id="instructions" style="display: none;">
+        <h2>Intruksi Kuis</h2>
+        <p>Welcome to Matching Mania! Here's how to play it.</p>
+        <ul>
+            <li>Terdapat 5 soal dalam permainan ini.</li>
+            <li>Setiap pertanyaan berupa bayangan dengan 4 pilihan jawaban.</li>
+            <li>Anda harus memilih salah satu dari 4 pilihan jawaban itu yang paling cocok dengan bayangan yang ada pada pertanyaan.</li>
+            <li>Anda memiliki waktu 10 detik untuk mencocokkan setiap pertanyaan.</li>
+            <li>Skor Anda akan ditampilkan setelah kuis selesai.</li>
+        </ul>
+        <button id="start-quiz-button" onclick="startQuiz()">Mulai Kuis</button>
+</div>
+
+    <div id="quiz-container" style="display: none;">
+        <div id="timer">
+            <img id="timer-image" src="aset/timer-icon-7799.png" alt="Timer" style="width: 50px; height: auto;">
+            <span id="time">10</span> 
+        </div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="feedback" style="font-size: 20px; margin-top: 20px;"></div> <!-- Elemen untuk menampilkan pesan -->
+
+       <!-- Elemen untuk menampilkan skor dalam box -->
+    <div id="score-box" style="display: none; border: 2px solid blue; padding: 20px; margin-top: 20px; background-color: lightblue;">
+        <div id="final-score" style="font-size: 24px;"></div> <!-- Elemen untuk menampilkan skor akhir -->
+    </div>
+    
+    <!-- Box konfirmasi untuk mengulang kuis -->
+    <div id="restart-confirmation" style="display: none; border: 2px solid green; padding: 20px; margin-top: 20px; background-color: lightgreen;">
+        <p>Do you want to try again?</p>
+        <button onclick="restartQuiz()">Yes</button>
+        <button onclick="cancelRestart()">No</button>
+    </div>
+        <button id="next-button" onclick="nextQuestion()">Berikutnya</button>
+    </div>
+
+    <audio id="click-sound" src="sound/NEXT.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="sound/MENANG.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

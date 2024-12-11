@@ -1,0 +1,185 @@
+body {
+    background-color: #fafad2; /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
+    background-position: center; /* Mengatur posisi gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    height: 100vh; /* Mengatur tinggi body agar memenuhi viewport */
+    margin: 0; /* Menghapus margin default */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+   font-family: "Slackey", sans-serif;
+   font-size: 85px;
+   color: #8b008b;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-align: center;
+    animation: zoom 0.5s ease-in-out; /* Menambahkan animasi zoom */
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#instructions {
+    background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi */
+    border: 2px solid #8b008b; /* Warna border sesuai dengan tema */
+    padding: 20px; /* Jarak di dalam box */
+    margin: 20px auto; /* Jarak luar dan memusatkan box */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+    text-align: left; /* Teks rata kiri untuk daftar instruksi */
+    max-width: 600px; /* Lebar maksimum instruksi */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#instructions h2 {
+    font-family: "Slackey", sans-serif;
+    color: #8b008b; /* Warna heading sesuai tema */
+    text-align: center; /* Pusatkan heading */
+}
+
+#instructions p {
+    font-family: cursive;
+    font-size: 16px; /* Ukuran font untuk paragraf */
+    color: #8b008b; /* Warna teks */
+    text-align: center;
+}
+
+#instructions ul {
+    font-family: cursive;
+    color: #8b008b;
+    margin: 10px 0; /* Jarak atas dan bawah untuk daftar */
+    padding-left: 20px; /* Jarak kiri untuk daftar */
+}
+
+#instructions li {
+    margin: 5px 0; /* Jarak antar item daftar */
+}
+
+#start-quiz-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8b008b; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    cursor: pointer;
+}
+
+#start-quiz-button:hover {
+    background-color: midnightblue;
+}
+
+#quiz-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.option {
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+/* Gaya untuk opsi jawaban saat diklik */
+.option:selected {
+    background-color: #ccc; /* Warna latar belakang opsi saat diklik */
+    color: #fff; /* Warna teks opsi saat diklik */
+}
+
+/* Gaya untuk opsi jawaban saat salah */
+.option:invalid {
+    background-color: #f00; /* Warna latar belakang opsi saat salah */
+    color: #fff; /* Warna teks opsi saat salah */
+}
+
+/* Gaya untuk opsi jawaban saat benar */
+.option:valid {
+    background-color: #0f0; /* Warna latar belakang opsi saat benar */
+    color: #fff; /* Warna teks opsi saat benar */
+}
+
+#score-box {
+    border: 2px solid blue; /* Warna border */
+    padding: 20px; /* Jarak di dalam box */
+    margin-top: 20px; /* Jarak atas */
+    background-color: lightblue; /* Warna latar belakang */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+}
+
+/* Gaya untuk box konfirmasi */
+#restart-confirmation {
+    display: none; /* Sembunyikan box konfirmasi secara default */
+    border: 2px solid green; /* Warna border */
+    padding: 20px; /* Jarak di dalam box */
+    margin-top: 20px; /* Jarak atas */
+    background-color: lightgreen; /* Warna latar belakang */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+}
+
+/* Gaya untuk tombol */
+button {
+    background-color: #8b008b; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tanpa border */
+    padding: 10px 20px; /* Jarak di dalam tombol */
+    text-align: center; /* Teks di tengah */
+    text-decoration: none; /* Tanpa garis bawah */
+    display: inline-block; /* Menampilkan tombol dalam baris */
+    font-size: 16px; /* Ukuran font */
+    margin: 10px 2px; /* Jarak antar tombol */
+    padding: 10px 20px;
+    cursor: pointer; /* Kursor menjadi pointer saat hover */
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Transisi warna latar belakang */
+}
+
+/* Gaya untuk tombol saat hover */
+button:hover {
+    background-color: midnightblue; /* Warna latar belakang saat hover */
+}
+
+img {
+    max-width: 250px; /* Atur lebar maksimum gambar */
+    height: auto;     /* Jaga agar rasio aspek tetap */
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+}
+
+#time-image {
+    margin-right: 8px;
+    background-color: #0b2235;
+}
+
+#time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a5d4e1;
+    background-color: #0b2235;
+    padding: 10px;
+    border-radius: 10px;
+  }
